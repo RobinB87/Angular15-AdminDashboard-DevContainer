@@ -52,7 +52,7 @@ export class AreaComponent implements OnInit {
           }
       },
       series: [{
-          type: "line",
+          type: "line", // TODO: Should be area?
           data: [1,2,3,4,5]
       }]
   };
