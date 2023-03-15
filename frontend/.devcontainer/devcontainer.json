@@ -1,0 +1,23 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+	"name": "Untitled Node.js project",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": { 
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"angular.ng-template",
+				"sibiraj-s.vscode-scss-formatter",
+				"gruntfuggly.todo-tree",
+				"nrwl.angular-console",
+				"meganrogge.template-string-converter"
+			]
+		}
+	},
+	"remoteUser": "node",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {}
+	}
+}
