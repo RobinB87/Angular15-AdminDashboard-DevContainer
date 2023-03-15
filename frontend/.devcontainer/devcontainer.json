@@ -1,23 +1,30 @@
 // See https://containers.dev/implementors/json_reference/ for configuration reference
 {
-	"name": "Untitled Node.js project",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"customizations": {
-		"vscode": { 
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-				"angular.ng-template",
-				"sibiraj-s.vscode-scss-formatter",
-				"gruntfuggly.todo-tree",
-				"nrwl.angular-console",
-				"meganrogge.template-string-converter"
-			]
-		}
-	},
-	"remoteUser": "node",
-	"features": {
-		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {}
-	}
+  "name": "Node with Angular project",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postStartCommand": "git config --global user.email \"${localEnv:VSCODE_CONTAINER_GIT_EMAIL}\" && git config --global user.name \"${localEnv:VSCODE_CONTAINER_GIT_USER}\"",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "angular.ng-template",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "gruntfuggly.todo-tree",
+        "meganrogge.template-string-converter",
+        "nrwl.angular-console",
+        "sibiraj-s.vscode-scss-formatter"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "prettier.resolveGlobalModules": true
+      }
+    }
+  },
+  "remoteUser": "node",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/angular-cli:2": {}
+  }
 }
